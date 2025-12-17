@@ -1,16 +1,141 @@
-# React + Vite
+🛒 Amazon Clone (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fully functional Amazon-style e-commerce web application built with React, featuring product listings, cart management, quantity control, subtotal calculation, and global state management using Context API.
 
-Currently, two official plugins are available:
+🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🏠 Home page with product categories
 
-## React Compiler
+🛍️ Product listing using FakeStore API
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+➕ Add products to cart
 
-## Expanding the ESLint configuration
+➖ Increase / decrease product quantity
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🗑️ Remove product when quantity reaches zero
+
+🧮 Dynamic subtotal calculation
+
+🛒 Cart item count updates in header
+
+🌐 Client-side routing with React Router
+
+🎨 Responsive UI with CSS Modules
+
+🧰 Tech Stack
+
+React
+
+React Router DOM
+
+Context API + Reducer
+
+FakeStore API
+
+CSS Modules
+
+React Icons
+
+📁 Project Structure
+src/
+│
+├── Components/
+│   ├── Header/
+│   ├── LowerHeader/
+│   ├── Layout/
+│   ├── Product/
+│   ├── CurrencyFormat/
+│   └── DataProvider/
+│
+├── Pages/
+│   ├── Home/
+│   ├── Cart/
+│   └── Auth/
+│
+├── Utility/
+│   ├── reducer.js
+│   └── action.type.js
+│
+└── App.js
+
+🔁 State Management
+
+Global state is handled using React Context API with a reducer.
+
+Actions
+
+ADD_TO_BASKET
+
+REMOVE_FROM_BASKET
+
+Example Reducer Logic
+
+Adds item if not in cart
+
+Increases quantity if item exists
+
+Decreases quantity or removes item when count reaches zero
+
+🌐 API Used
+
+FakeStore API
+
+https://fakestoreapi.com/products
+https://fakestoreapi.com/products/category/:category
+
+
+Product images are loaded directly from the API response (product.image).
+
+🧮 Cart Logic
+
+Cart count in header = sum of item quantities
+
+Subtotal = price × amount
+
+Quantity updates instantly using reducer logic
+
+▶️ Getting Started
+1️⃣ Clone the repository
+git clone https://github.com/ab-kinight/amazon-clone.git
+
+2️⃣ Install dependencies
+npm install
+
+3️⃣ Run the app
+npm start
+
+
+App runs on:
+
+http://localhost:3000
+
+📌 Future Improvements
+
+🔐 Authentication (Firebase/Auth)
+
+💳 Payment integration
+
+📦 Orders history
+
+❤️ Wishlist
+
+🔍 Search & filter
+
+📱 Better mobile responsiveness
+
+🧠 Learning Outcomes
+
+Deep understanding of Context API
+
+Real-world reducer logic
+
+Handling quantities in cart
+
+React component architecture
+
+API data handling
+
+👤 Author
+
+Abel
+Built as a learning & portfolio project 🚀
