@@ -5,11 +5,10 @@ import App from "./App";
 import { DataProvider } from "./Components/DataProvider/DataProvider";
 import { initialState, reducer } from "./Utility/reducer";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-      <DataProvider reducer={reducer} initialState={initialState}>
-        <App />
-      </DataProvider>
+    <DataProvider reducer={reducer} initialState={initialState}>
+      <App />
+    </DataProvider>
   </React.StrictMode>
 );
